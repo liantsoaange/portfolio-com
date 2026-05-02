@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Send, FileText } from "lucide-react"
+import { Send } from "lucide-react"
 
 export function Hero() {
   return (
