@@ -1,5 +1,5 @@
-import { SectionTitle } from "@/components/atoms/SectionTitle"
-import { Sparkles } from "lucide-react"
+// import { SectionTitle } from "@/components/atoms/SectionTitle"
+// import { Sparkles } from "lucide-react"
 
 export function About() {
   return (
