@@ -13,7 +13,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ title, company, period, description, skills, imageUrl, links }: ExperienceCardProps) {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-md border-muted">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-muted group">
       <CardHeader className="bg-muted/30 pb-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
           <div>

@@ -14,29 +14,35 @@ export function Certifications() {
   ]
 
   return (
-    <section className="py-20 bg-white" id="certifications">
-      <div className="container px-4 md:px-6">
+    <section className="py-24 bg-white" id="certifications">
+      <div className="container px-4 md:px-6 animate-fade-in-up">
         <SectionTitle 
           title="Certifications & Diplômes" 
           subtitle="Preuves de mon engagement continu dans l'apprentissage et l'excellence."
         />
         <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {certificates.map((cert, index) => (
-            <Card key={index} className="group overflow-hidden border-muted hover:border-primary/20 transition-all">
-              <CardContent className="p-0">
-                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.title} 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 cursor-zoom-in"
-                  />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                    <p className="text-white font-bold text-sm">{cert.title}</p>
-                    <p className="text-white/80 text-xs">{cert.org}</p>
+            <div 
+              key={index} 
+              className="animate-fade-in-up" 
+              style={{ animationDelay: `${(index + 1) * 100}ms` }}
+            >
+              <Card className="group overflow-hidden border-muted hover:border-primary/20 transition-all hover:shadow-lg">
+                <CardContent className="p-0">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title} 
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 cursor-zoom-in"
+                    />
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+                      <p className="text-white font-bold text-sm">{cert.title}</p>
+                      <p className="text-white/80 text-xs">{cert.org}</p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

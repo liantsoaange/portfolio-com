@@ -55,15 +55,16 @@ export function Experience() {
   ]
 
   return (
-    <section className="py-20 bg-white" id="experience">
-      <div className="container px-4 md:px-6">
+    <section className="py-24 bg-white" id="experience">
+      <div className="container px-4 md:px-6 animate-fade-in-up">
         <SectionTitle 
           title="Parcours Professionnel" 
-          subtitle="Une expertise solide en communication institutionnelle et corporate."
         />
-        <div className="grid gap-8 max-w-4xl">
+        <div className="grid gap-8 max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
-            <ExperienceCard key={index} {...exp} />
+            <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 150}ms` }}>
+              <ExperienceCard {...exp} />
+            </div>
           ))}
         </div>
       </div>

@@ -24,15 +24,17 @@ export function Education() {
   ]
 
   return (
-    <section className="py-20 bg-[#F8F6F0]" id="education">
-      <div className="container px-4 md:px-6">
+    <section className="py-24 bg-[#F8F6F0]" id="education">
+      <div className="container px-4 md:px-6 animate-fade-in-up">
         <SectionTitle 
           title="Parcours Universitaire" 
-          subtitle="Une formation académique de haut niveau en marketing et communication."
+          subtitle="Une base académique solide alliant rigueur scientifique et expertise technologique."
         />
-        <div className="grid gap-6 md:grid-cols-2 max-w-5xl">
+        <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
           {education.map((edu, index) => (
-            <EducationCard key={index} {...edu} />
+            <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 150}ms` }}>
+              <EducationCard {...edu} />
+            </div>
           ))}
         </div>
       </div>
