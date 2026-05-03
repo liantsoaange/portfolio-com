@@ -22,7 +22,7 @@ export function ProjectCard({ title, category, imageUrl, description, tags }: Pr
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card className="group overflow-hidden flex flex-col border-muted transition-all duration-300 hover:border-primary/20 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+        <Card className="h-full group overflow-hidden flex flex-col border-muted transition-all duration-300 hover:border-primary/20 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
           <div className="relative h-48 overflow-hidden">
             <img 
               src={imageUrl} 

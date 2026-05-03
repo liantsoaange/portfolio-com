@@ -32,7 +32,7 @@ export function Education() {
         />
         <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
           {education.map((edu, index) => (
-            <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${(index + 1) * 150}ms` }}>
+            <div key={index} className="animate-fade-in-up h-full" style={{ animationDelay: `${(index + 1) * 150}ms` }}>
               <EducationCard {...edu} />
             </div>
           ))}

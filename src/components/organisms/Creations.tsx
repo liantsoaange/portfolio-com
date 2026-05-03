@@ -38,13 +38,13 @@ export function Creations() {
       <div className="container px-4 md:px-6 animate-fade-in-up">
         <SectionTitle 
           title="Mes Créations" 
-          subtitle="Un aperçu de mon travail créatif et stratégique."
+          subtitle="Un aperçu de mon travail créatif"
         />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="animate-fade-in-up" 
+              className="animate-fade-in-up h-full" 
               style={{ animationDelay: `${(index + 1) * 150}ms` }}
             >
               <ProjectCard {...project} />
